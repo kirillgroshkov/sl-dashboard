@@ -1,0 +1,42 @@
+@import 'var';
+
+// Common
+// -------------------------------
+
+body {
+  cursor: default;
+  overflow-y: scroll;
+}
+
+a {
+  color: inherit;
+  cursor: pointer;
+  transition: all 0.3s ease-out;
+  text-decoration: none !important;
+
+  // both :hover and :active
+  // #{$active} {
+  &:hover,
+  &:active,
+  &.active {
+    color: $colorActive;
+    transition: all 0.1s ease-out;
+  }
+
+  &.active {
+    cursor: default;
+  }
+
+  // just :active
+  &:not(.active):active {
+    // opacity: 0.3 !important;
+  }
+
+  .nostyle > & {
+    &:hover,
+    &:active,
+    &.active {
+      color: inherit;
+    }
+  }
+}

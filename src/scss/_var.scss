@@ -1,0 +1,20 @@
+@import 'bootstrap-override'; // our overrides of bootstrap vars
+@import '../../node_modules/bootstrap/scss/functions';
+@import '../../node_modules/bootstrap/scss/variables'; // default variables from bootstrap
+@import '../../node_modules/bootstrap/scss/mixins';
+@import 'mixin';
+
+// Vars
+
+$imgPath: '/assets/img';
+
+$active: 'body.no-touch &:not(.active):hover, &:not(.active):active';
+$activeAndTouch: '&:hover, &:active';
+
+// Colors
+
+$colorActive: lighten(#dc143c, 20%);
+
+// Sizes
+
+$lineHeightBase: 1.428571429;

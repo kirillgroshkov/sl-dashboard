@@ -1,5 +1,4 @@
 import { departuresMock } from '../mock/departures.mock'
-import { secret } from '../secret'
 
 export interface Departure {
   LineNumber: string

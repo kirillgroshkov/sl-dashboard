@@ -18,6 +18,7 @@ const Y_LABEL = {
 })
 export class AppSL {
   @Element() el: HTMLElement
+  @Prop({ context: 'isServer' }) private isServer: boolean
   @State() departures: Departure[] = []
   @State() latestUpdate: string
   @State() currentTime = timeUtil.now()
@@ -25,6 +26,7 @@ export class AppSL {
   private chart: Chart
 
   async componentDidLoad () {
+    if (this.isServer) return
     // alert('The component did load')
     this.fetchDepartures() // async
     this.onTimer()

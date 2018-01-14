@@ -8,6 +8,36 @@ import '@stencil/router';
 
 
 import {
+  AppRoot as AppRoot
+} from './components/app-root/app-root';
+
+declare global {
+  interface HTMLAppRootElement extends AppRoot, HTMLElement {
+  }
+  var HTMLAppRootElement: {
+    prototype: HTMLAppRootElement;
+    new (): HTMLAppRootElement;
+  };
+  interface HTMLElementTagNameMap {
+    "app-root": HTMLAppRootElement;
+  }
+  interface ElementTagNameMap {
+    "app-root": HTMLAppRootElement;
+  }
+  namespace JSX {
+    interface IntrinsicElements {
+      "app-root": JSXElements.AppRootAttributes;
+    }
+  }
+  namespace JSXElements {
+    export interface AppRootAttributes extends HTMLAttributes {
+      
+    }
+  }
+}
+
+
+import {
   AppSL as AppSl
 } from './components/app-sl/app-sl';
 

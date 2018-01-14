@@ -8,29 +8,29 @@ import '@stencil/router';
 
 
 import {
-  AppRoot as AppRoot
-} from './components/app-root/app-root';
+  AppSL as AppSl
+} from './components/app-sl/app-sl';
 
 declare global {
-  interface HTMLAppRootElement extends AppRoot, HTMLElement {
+  interface HTMLAppSlElement extends AppSl, HTMLElement {
   }
-  var HTMLAppRootElement: {
-    prototype: HTMLAppRootElement;
-    new (): HTMLAppRootElement;
+  var HTMLAppSlElement: {
+    prototype: HTMLAppSlElement;
+    new (): HTMLAppSlElement;
   };
   interface HTMLElementTagNameMap {
-    "app-root": HTMLAppRootElement;
+    "app-sl": HTMLAppSlElement;
   }
   interface ElementTagNameMap {
-    "app-root": HTMLAppRootElement;
+    "app-sl": HTMLAppSlElement;
   }
   namespace JSX {
     interface IntrinsicElements {
-      "app-root": JSXElements.AppRootAttributes;
+      "app-sl": JSXElements.AppSlAttributes;
     }
   }
   namespace JSXElements {
-    export interface AppRootAttributes extends HTMLAttributes {
+    export interface AppSlAttributes extends HTMLAttributes {
       
     }
   }

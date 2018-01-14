@@ -26,8 +26,8 @@
     ]
   },
   "dependencies": {
-    "@stencil/core": "0.0.8-9",
-    "@stencil/router": "latest",
+    "@stencil/core": "0.1.4",
+    "@stencil/router": "^0.0.21",
     "bootstrap": "4.0.0-beta.2",
     "chart.js": "^2.7.1",
     "jquery": "^3.2.1",
@@ -35,7 +35,7 @@
     "popper.js": "1.12.9"
   },
   "devDependencies": {
-    "@stencil/dev-server": "latest",
+    "@stencil/dev-server": "^0.0.18",
     "@stencil/utils": "latest",
     "@types/bluebird": "^3.5.18",
     "@types/chart.js": "^2.7.3",
@@ -45,7 +45,7 @@
     "dotenv": "^4.0.0",
     "fs-extra": "^4.0.2",
     "kg-dev": "^1.0.0",
-    "tslint": "^5.8.0",
+    "tslint": "^5.9.1",
     "typescript": "^2.6.0"
   },
   "author": "Kirill Groshkov <1@inventix.ru>",

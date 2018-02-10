@@ -7,12 +7,21 @@
 import '@stencil/router';
 
 
+declare global {
+  interface HTMLStencilElement extends HTMLElement {
+    componentOnReady(): Promise<this>;
+    componentOnReady(done: (ele?: this) => void): void;
+  }
+}
+
+
+
 import {
   AppRoot as AppRoot
 } from './components/app-root/app-root';
 
 declare global {
-  interface HTMLAppRootElement extends AppRoot, HTMLElement {
+  interface HTMLAppRootElement extends AppRoot, HTMLStencilElement {
   }
   var HTMLAppRootElement: {
     prototype: HTMLAppRootElement;
@@ -42,7 +51,7 @@ import {
 } from './components/app-sl/app-sl';
 
 declare global {
-  interface HTMLAppSlElement extends AppSl, HTMLElement {
+  interface HTMLAppSlElement extends AppSl, HTMLStencilElement {
   }
   var HTMLAppSlElement: {
     prototype: HTMLAppSlElement;
@@ -66,3 +75,4 @@ declare global {
   }
 }
 
+declare global { namespace JSX { interface StencilJSX {} } }

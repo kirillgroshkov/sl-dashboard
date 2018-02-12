@@ -8,21 +8,21 @@
   dependencies:
     netmask "^1.0.6"
 
-"@stencil/core@0.4.0":
-  version "0.4.0"
-  resolved "https://registry.yarnpkg.com/@stencil/core/-/core-0.4.0.tgz#02009ca46ee7c3cef1bdcc9b71e9566ed8e30687"
+"@stencil/core@^0.4.3":
+  version "0.4.3"
+  resolved "https://registry.yarnpkg.com/@stencil/core/-/core-0.4.3.tgz#e9c782ed81b6b571a84a1996b5e5b524c6f6e946"
   dependencies:
-    chokidar "2.0.0"
+    chokidar "2.0.1"
     jsdom "11.5.1"
     node-sass "4.7.2"
-    rollup "^0.55.3"
+    rollup "0.55.3"
     rollup-plugin-commonjs "8.3.0"
-    rollup-plugin-node-builtins "^2.1.2"
-    rollup-plugin-node-globals "^1.1.0"
+    rollup-plugin-node-builtins "2.1.2"
+    rollup-plugin-node-globals "1.1.0"
     rollup-plugin-node-resolve "3.0.2"
     typescript "^2.7.1"
-    uglify-es "3.3.8"
-    workbox-build "3.0.0-alpha.3"
+    uglify-es "3.3.9"
+    workbox-build "3.0.0-alpha.6"
 
 "@stencil/dev-server@^0.0.18":
   version "0.0.18"
@@ -120,7 +120,7 @@ ansi-styles@^2.2.1:
   version "2.2.1"
   resolved "https://registry.yarnpkg.com/ansi-styles/-/ansi-styles-2.2.1.tgz#b432dd3358b634cf75e1e4664368240533c1ddbe"
 
-ansi-styles@^3.1.0:
+ansi-styles@^3.2.0:
   version "3.2.0"
   resolved "https://registry.yarnpkg.com/ansi-styles/-/ansi-styles-3.2.0.tgz#c159b8d5be0f9e5a6f346dab94f16ce022161b88"
   dependencies:
@@ -492,12 +492,12 @@ chalk@^1.1.1, chalk@^1.1.3:
     supports-color "^2.0.0"
 
 chalk@^2.3.0:
-  version "2.3.0"
-  resolved "https://registry.yarnpkg.com/chalk/-/chalk-2.3.0.tgz#b5ea48efc9c1793dccc9b4767c93914d3f2d52ba"
+  version "2.3.1"
+  resolved "https://registry.yarnpkg.com/chalk/-/chalk-2.3.1.tgz#523fe2678aec7b04e8041909292fe8b17059b796"
   dependencies:
-    ansi-styles "^3.1.0"
+    ansi-styles "^3.2.0"
     escape-string-regexp "^1.0.5"
-    supports-color "^4.0.0"
+    supports-color "^5.2.0"
 
 chart.js@^2.7.1:
   version "2.7.1"
@@ -519,9 +519,9 @@ chartjs-color@~2.2.0:
     chartjs-color-string "^0.5.0"
     color-convert "^0.5.3"
 
-chokidar@2.0.0:
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/chokidar/-/chokidar-2.0.0.tgz#6686313c541d3274b2a5c01233342037948c911b"
+chokidar@2.0.1:
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/chokidar/-/chokidar-2.0.1.tgz#6e67e9998fe10e8f651e975ca62460456ff8e297"
   dependencies:
     anymatch "^2.0.0"
     async-each "^1.0.0"
@@ -533,6 +533,7 @@ chokidar@2.0.0:
     normalize-path "^2.1.1"
     path-is-absolute "^1.0.0"
     readdirp "^2.0.0"
+    upath "1.0.0"
   optionalDependencies:
     fsevents "^1.0.0"
 
@@ -1276,9 +1277,9 @@ has-ansi@^2.0.0:
   dependencies:
     ansi-regex "^2.0.0"
 
-has-flag@^2.0.0:
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/has-flag/-/has-flag-2.0.0.tgz#e8207af1cc7b30d446cc70b734b5e8be18f88d51"
+has-flag@^3.0.0:
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/has-flag/-/has-flag-3.0.0.tgz#b5d454dc2199ae225699f3467e5a07f3b955bafd"
 
 has-unicode@^2.0.0:
   version "2.0.1"
@@ -1933,6 +1934,10 @@ lodash.templatesettings@^4.0.0:
   resolved "https://registry.yarnpkg.com/lodash.templatesettings/-/lodash.templatesettings-4.1.0.tgz#2b4d4e95ba440d915ff08bc899e4553666713316"
   dependencies:
     lodash._reinterpolate "~3.0.0"
+
+lodash@3.x:
+  version "3.10.1"
+  resolved "https://registry.yarnpkg.com/lodash/-/lodash-3.10.1.tgz#5bf45e8e49ba4189e17d482789dfd15bd140b7b6"
 
 lodash@^4.0.0, lodash@^4.13.1, lodash@~4.17.4:
   version "4.17.5"
@@ -2760,7 +2765,7 @@ rollup-plugin-commonjs@8.3.0:
     resolve "^1.4.0"
     rollup-pluginutils "^2.0.1"
 
-rollup-plugin-node-builtins@^2.1.2:
+rollup-plugin-node-builtins@2.1.2:
   version "2.1.2"
   resolved "https://registry.yarnpkg.com/rollup-plugin-node-builtins/-/rollup-plugin-node-builtins-2.1.2.tgz#24a1fed4a43257b6b64371d8abc6ce1ab14597e9"
   dependencies:
@@ -2769,7 +2774,7 @@ rollup-plugin-node-builtins@^2.1.2:
     crypto-browserify "^3.11.0"
     process-es6 "^0.11.2"
 
-rollup-plugin-node-globals@^1.1.0:
+rollup-plugin-node-globals@1.1.0:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/rollup-plugin-node-globals/-/rollup-plugin-node-globals-1.1.0.tgz#7efd8d611d132737829e804e9f51f50962af451f"
   dependencies:
@@ -2802,9 +2807,9 @@ rollup-pluginutils@^2.0.1:
     estree-walker "^0.3.0"
     micromatch "^2.3.11"
 
-rollup@^0.55.3:
-  version "0.55.5"
-  resolved "https://registry.yarnpkg.com/rollup/-/rollup-0.55.5.tgz#2f88c300f7cf24b5ec2dca8a6aba73b04e087e93"
+rollup@0.55.3:
+  version "0.55.3"
+  resolved "https://registry.yarnpkg.com/rollup/-/rollup-0.55.3.tgz#0af082a766d51c3058430c8372442ff5207d8736"
 
 safe-buffer@^5.0.1, safe-buffer@^5.1.0, safe-buffer@^5.1.1, safe-buffer@~5.1.0, safe-buffer@~5.1.1:
   version "5.1.1"
@@ -3067,11 +3072,11 @@ supports-color@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/supports-color/-/supports-color-2.0.0.tgz#535d045ce6b6363fa40117084629995e9df324c7"
 
-supports-color@^4.0.0:
-  version "4.5.0"
-  resolved "https://registry.yarnpkg.com/supports-color/-/supports-color-4.5.0.tgz#be7a0de484dec5c5cddf8b3d59125044912f635b"
+supports-color@^5.2.0:
+  version "5.2.0"
+  resolved "https://registry.yarnpkg.com/supports-color/-/supports-color-5.2.0.tgz#b0d5333b1184dd3666cbe5aa0b45c5ac7ac17a4a"
   dependencies:
-    has-flag "^2.0.0"
+    has-flag "^3.0.0"
 
 symbol-tree@^3.2.1:
   version "3.2.2"
@@ -3217,9 +3222,9 @@ typescript@^2.6.0, typescript@^2.7.1:
   version "2.7.1"
   resolved "https://registry.yarnpkg.com/typescript/-/typescript-2.7.1.tgz#bb3682c2c791ac90e7c6210b26478a8da085c359"
 
-uglify-es@3.3.8:
-  version "3.3.8"
-  resolved "https://registry.yarnpkg.com/uglify-es/-/uglify-es-3.3.8.tgz#f2c68e6cff0d0f9dc9577e4da207151c2e753b7e"
+uglify-es@3.3.9:
+  version "3.3.9"
+  resolved "https://registry.yarnpkg.com/uglify-es/-/uglify-es-3.3.9.tgz#0c1c4f0700bed8dbc124cdb304d2592ca203e677"
   dependencies:
     commander "~2.13.0"
     source-map "~0.6.1"
@@ -3227,6 +3232,10 @@ uglify-es@3.3.8:
 uid-number@^0.0.6:
   version "0.0.6"
   resolved "https://registry.yarnpkg.com/uid-number/-/uid-number-0.0.6.tgz#0ea10e8035e8eb5b8e4449f06da1c730663baa81"
+
+underscore.string@2.3.x:
+  version "2.3.3"
+  resolved "https://registry.yarnpkg.com/underscore.string/-/underscore.string-2.3.3.tgz#71c08bf6b428b1133f37e78fa3a21c82f7329b0d"
 
 union-value@^1.0.0:
   version "1.0.0"
@@ -3247,6 +3256,13 @@ unset-value@^1.0.0:
   dependencies:
     has-value "^0.3.1"
     isobject "^3.0.0"
+
+upath@1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/upath/-/upath-1.0.0.tgz#b4706b9461ca8473adf89133d235689ca17f3656"
+  dependencies:
+    lodash "3.x"
+    underscore.string "2.3.x"
 
 urix@^0.1.0:
   version "0.1.0"
@@ -3340,21 +3356,21 @@ wordwrap@~1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/wordwrap/-/wordwrap-1.0.0.tgz#27584810891456a4171c8d0226441ade90cbcaeb"
 
-workbox-background-sync@^3.0.0-alpha.3, workbox-background-sync@^3.0.0-beta.0:
+workbox-background-sync@^3.0.0-alpha.6, workbox-background-sync@^3.0.0-beta.0:
   version "3.0.0-beta.0"
   resolved "https://registry.yarnpkg.com/workbox-background-sync/-/workbox-background-sync-3.0.0-beta.0.tgz#5ce2e206af8b46c7de6b60440ed46764d7b413f5"
   dependencies:
     workbox-core "^3.0.0-beta.0"
 
-workbox-broadcast-cache-update@^3.0.0-alpha.3:
+workbox-broadcast-cache-update@^3.0.0-alpha.6:
   version "3.0.0-beta.0"
   resolved "https://registry.yarnpkg.com/workbox-broadcast-cache-update/-/workbox-broadcast-cache-update-3.0.0-beta.0.tgz#d0e790c3b87612f4fa13af0825e9098322fd7e03"
   dependencies:
     workbox-core "^3.0.0-beta.0"
 
-workbox-build@3.0.0-alpha.3:
-  version "3.0.0-alpha.3"
-  resolved "https://registry.yarnpkg.com/workbox-build/-/workbox-build-3.0.0-alpha.3.tgz#a9c1217a6d27171347e6d76c637ab84f49b523b5"
+workbox-build@3.0.0-alpha.6:
+  version "3.0.0-alpha.6"
+  resolved "https://registry.yarnpkg.com/workbox-build/-/workbox-build-3.0.0-alpha.6.tgz#c290dbfa7b427cfd3f2379499d490784635bded7"
   dependencies:
     babel-runtime "^6.26.0"
     common-tags "^1.4.0"
@@ -3362,34 +3378,34 @@ workbox-build@3.0.0-alpha.3:
     glob "^7.1.2"
     joi "^11.1.1"
     lodash.template "^4.4.0"
-    workbox-background-sync "^3.0.0-alpha.3"
-    workbox-broadcast-cache-update "^3.0.0-alpha.3"
-    workbox-cache-expiration "^3.0.0-alpha.3"
-    workbox-cacheable-response "^3.0.0-alpha.3"
-    workbox-core "^3.0.0-alpha.3"
-    workbox-google-analytics "^3.0.0-alpha.3"
-    workbox-precaching "^3.0.0-alpha.3"
-    workbox-routing "^3.0.0-alpha.3"
-    workbox-strategies "^3.0.0-alpha.3"
-    workbox-sw "^3.0.0-alpha.3"
+    workbox-background-sync "^3.0.0-alpha.6"
+    workbox-broadcast-cache-update "^3.0.0-alpha.6"
+    workbox-cache-expiration "^3.0.0-alpha.6"
+    workbox-cacheable-response "^3.0.0-alpha.6"
+    workbox-core "^3.0.0-alpha.6"
+    workbox-google-analytics "^3.0.0-alpha.6"
+    workbox-precaching "^3.0.0-alpha.6"
+    workbox-routing "^3.0.0-alpha.6"
+    workbox-strategies "^3.0.0-alpha.6"
+    workbox-sw "^3.0.0-alpha.6"
 
-workbox-cache-expiration@^3.0.0-alpha.3:
+workbox-cache-expiration@^3.0.0-alpha.6:
   version "3.0.0-beta.0"
   resolved "https://registry.yarnpkg.com/workbox-cache-expiration/-/workbox-cache-expiration-3.0.0-beta.0.tgz#ad6a751d14a843553776f1d0beb50defadee7a07"
   dependencies:
     workbox-core "^3.0.0-beta.0"
 
-workbox-cacheable-response@^3.0.0-alpha.3:
+workbox-cacheable-response@^3.0.0-alpha.6:
   version "3.0.0-beta.0"
   resolved "https://registry.yarnpkg.com/workbox-cacheable-response/-/workbox-cacheable-response-3.0.0-beta.0.tgz#876a9f39db05a5c6a93fd67e559018a78b5bc727"
   dependencies:
     workbox-core "^3.0.0-beta.0"
 
-workbox-core@^3.0.0-alpha.3, workbox-core@^3.0.0-beta.0:
+workbox-core@^3.0.0-alpha.6, workbox-core@^3.0.0-beta.0:
   version "3.0.0-beta.0"
   resolved "https://registry.yarnpkg.com/workbox-core/-/workbox-core-3.0.0-beta.0.tgz#5cb45a26c4b5ea777a295bf5319bf598938d4e4e"
 
-workbox-google-analytics@^3.0.0-alpha.3:
+workbox-google-analytics@^3.0.0-alpha.6:
   version "3.0.0-beta.0"
   resolved "https://registry.yarnpkg.com/workbox-google-analytics/-/workbox-google-analytics-3.0.0-beta.0.tgz#657a0f0a78c96a3e0bb6a3148351e0621b33851a"
   dependencies:
@@ -3398,25 +3414,25 @@ workbox-google-analytics@^3.0.0-alpha.3:
     workbox-routing "^3.0.0-beta.0"
     workbox-strategies "^3.0.0-beta.0"
 
-workbox-precaching@^3.0.0-alpha.3:
+workbox-precaching@^3.0.0-alpha.6:
   version "3.0.0-beta.0"
   resolved "https://registry.yarnpkg.com/workbox-precaching/-/workbox-precaching-3.0.0-beta.0.tgz#f88cbe0b831e5ec4bae1020b12b7160e6baca29a"
   dependencies:
     workbox-core "^3.0.0-beta.0"
 
-workbox-routing@^3.0.0-alpha.3, workbox-routing@^3.0.0-beta.0:
+workbox-routing@^3.0.0-alpha.6, workbox-routing@^3.0.0-beta.0:
   version "3.0.0-beta.0"
   resolved "https://registry.yarnpkg.com/workbox-routing/-/workbox-routing-3.0.0-beta.0.tgz#55e35c2be9a37d358381766916f5c75c9ea95b26"
   dependencies:
     workbox-core "^3.0.0-beta.0"
 
-workbox-strategies@^3.0.0-alpha.3, workbox-strategies@^3.0.0-beta.0:
+workbox-strategies@^3.0.0-alpha.6, workbox-strategies@^3.0.0-beta.0:
   version "3.0.0-beta.0"
   resolved "https://registry.yarnpkg.com/workbox-strategies/-/workbox-strategies-3.0.0-beta.0.tgz#232798184b45d0ad12e598615f96d49861ef857f"
   dependencies:
     workbox-core "^3.0.0-beta.0"
 
-workbox-sw@^3.0.0-alpha.3:
+workbox-sw@^3.0.0-alpha.6:
   version "3.0.0-beta.0"
   resolved "https://registry.yarnpkg.com/workbox-sw/-/workbox-sw-3.0.0-beta.0.tgz#8a39491dca1d0f975ceb2ae01969052515eff184"
 

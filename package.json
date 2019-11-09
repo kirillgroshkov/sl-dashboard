@@ -5,35 +5,24 @@
   "description": "",
   "scripts": {
     "build": "stencil build --prerender",
-    "dev": "sd concurrent \"stencil build --dev --watch\" \"stencil-dev-server\" ",
-    "serve": "stencil-dev-server",
+    "test": "stencil test --spec --e2e",
+    "serve": "stencil build --dev --watch --serve",
+    "test.watch": "stencil test --spec --e2e --watchAll",
+    "generate": "stencil generate",
     "clean-www": "rm -rf ./www"
-  },
-  "lint-staged": {
-    "src/**/*.{ts,tsx}": [
-      "prettier --write",
-      "tslint -e './src/components.d.ts' -t stylish --fix",
-      "git add"
-    ],
-    "**/*.{css,scss,graphql,json,md}": [
-      "prettier --write",
-      "git add"
-    ]
   },
   "dependencies": {
     "@naturalcycles/frontend-lib": "^1.0.1",
     "@naturalcycles/js-lib": "^8.11.0",
     "@naturalcycles/time-lib": "^1.6.1",
-    "@stencil/core": "^1.7.5",
-    "@stencil/router": "^1.0.1",
     "bootstrap": "^4.3.1",
     "chart.js": "^2.9.2"
   },
   "devDependencies": {
     "@naturalcycles/dev-lib": "^9.0.3",
-    "@stencil/dev-server": "^0.0.18",
+    "@stencil/core": "^1.7.5",
+    "@stencil/router": "^1.0.1",
     "@stencil/sass": "^1.1.1",
-    "@stencil/utils": "0.0.5",
     "@types/chart.js": "^2.8.11",
     "@types/node": "^12.12.7"
   },

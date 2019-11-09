@@ -16,5 +16,7 @@ export const config: Config = {
       baseUrl: 'https://sl-dashboard.netlify.com',
       serviceWorker: null,
     }
-  ]
+  ],
+  globalStyle: 'src/global/app.css',
+  globalScript: 'src/global/app.ts',
 };

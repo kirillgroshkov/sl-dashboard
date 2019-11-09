@@ -1,24 +1,54 @@
-*~
-*.sw[mnpcod]
-*.log
-*.tmp
-*.tmp.*
-log.txt
-*.sublime-project
-*.sublime-workspace
+#
+# DO NOT MODIFY, WILL BE OVERWRITTEN BY @naturalcycles/dev-lib
+#
+# You can put more .gitignore files in your respective subfolders (e.g `src`) to ignore additional things.
+# Or PR to @naturalcycles/dev-lib if you want to ignore something generic.
+#
 
-/.idea
-/.vscode
-/.sass-cache
-/.versions
-/node_modules
-/$RECYCLE.BIN
-
+#
+# Global (all dirs)
+#
+*.iml
+.idea
 .DS_Store
-Thumbs.db
-UserInterfaceState.xcuserstate
+node_modules
 .env
-/src/secret.ts
+.npmrc
+.classpath
+.project
+.settings
+.externalToolBuilders
+.cache
+.gitconfig
+# new!
+.stencil
+
+#
+# Root dir
+#
+/target
+/*.log
+/log.txt
+/.sass-cache
+/.sourcemaps
+
+/coverage
+/report
 
 /dist
-/www
+/dist-cjs
+/dist-esm
+/tmp
+/deploy
+/build/deploy
+
+# All secrets are ignored, except encrypted
+/secret/**/*.*
+!/secret/**/*.enc
+
+/scripts/try.*
+/logs
+/platforms
+/plugins
+/www/*
+!/www/.gitkeep

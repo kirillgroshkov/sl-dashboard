@@ -1,5 +1,3 @@
-import { departuresMock } from '../mock/departures.mock'
-
 export interface Departure {
   LineNumber: string
   JourneyDirection: number
@@ -10,7 +8,7 @@ export interface Departure {
 }
 
 class SlApiService {
-  async getDepartures (siteId: string, timeWindow: number = 30): Promise<any> {
+  async getDepartures(siteId: string, timeWindow: number = 30): Promise<any> {
     const url = `https://kg-backend3.appspot.com/sl/departures`
 
     const r = await fetch(url)

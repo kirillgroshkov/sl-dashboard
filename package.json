@@ -4,15 +4,10 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "precommit": "lint-staged",
     "build": "stencil build --prerender",
     "dev": "sd concurrent \"stencil build --dev --watch\" \"stencil-dev-server\" ",
     "serve": "stencil-dev-server",
-    "start": "npm run dev",
-    "clean-www": "rm -rf ./www",
-    "tslint-all": "tslint './src/**/*.{ts,tsx}' -e './src/components.d.ts' -t stylish --fix",
-    "prettier-do": "prettier --write '**/*.{js,jsx,ts,tsx,css,scss,graphql,json}' '*.{md,js}'",
-    "prettier-all": "yarn prettier-do && yarn tslint-all"
+    "clean-www": "rm -rf ./www"
   },
   "lint-staged": {
     "src/**/*.{ts,tsx}": [
@@ -26,27 +21,21 @@
     ]
   },
   "dependencies": {
-    "@stencil/core": "^0.4.3",
-    "@stencil/router": "^0.0.25",
-    "bootstrap": "^4.0.0",
-    "chart.js": "^2.7.1",
-    "jquery": "^3.2.1",
-    "luxon": "^0.4.0",
-    "popper.js": "1.12.9"
+    "@naturalcycles/frontend-lib": "^1.0.1",
+    "@naturalcycles/js-lib": "^8.11.0",
+    "@naturalcycles/time-lib": "^1.6.1",
+    "@stencil/core": "^1.7.5",
+    "@stencil/router": "^1.0.1",
+    "bootstrap": "^4.3.1",
+    "chart.js": "^2.9.2"
   },
   "devDependencies": {
+    "@naturalcycles/dev-lib": "^9.0.3",
     "@stencil/dev-server": "^0.0.18",
-    "@stencil/utils": "latest",
-    "@types/bluebird": "^3.5.18",
-    "@types/chart.js": "^2.7.3",
-    "@types/fs-extra": "^5.0.0",
-    "@types/luxon": "^0.2.2",
-    "bluebird": "^3.5.1",
-    "dotenv": "^5.0.0",
-    "fs-extra": "^5.0.0",
-    "kg-dev": "^1.0.0",
-    "tslint": "^5.9.1",
-    "typescript": "^2.6.0"
+    "@stencil/sass": "^1.1.1",
+    "@stencil/utils": "0.0.5",
+    "@types/chart.js": "^2.8.11",
+    "@types/node": "^12.12.7"
   },
   "author": "Kirill Groshkov <1@inventix.ru>",
   "license": "MIT"

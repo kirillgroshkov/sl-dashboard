@@ -1,10 +1,9 @@
-import { Component, Element, Prop, State } from '@stencil/core'
+import { dayjs } from '@naturalcycles/time-lib'
+import { Component, Element, h, Prop, State } from '@stencil/core'
 import { LinearTickOptions } from 'chart.js'
-import * as Chart from 'chart.js'
-import { DateTime } from 'luxon'
+import Chart from 'chart.js'
 import { RADHUSET_SITE_ID } from '../../cnst/other'
 import { Departure, slApiService } from '../../srv/slApi.service'
-import { timeUtil } from '../../srv/time.util'
 
 const Y_LABEL = {
   3: 'Kungsträdgården',
@@ -21,14 +20,14 @@ export class AppSL {
   @Prop({ context: 'isServer' }) private isServer: boolean
   @State() departures: Departure[] = []
   @State() latestUpdate: string
-  @State() currentTime = timeUtil.now()
+  @State() currentTime = dayjs()
   @State() loading = false
   private chart: Chart
 
-  async componentDidLoad () {
+  async componentDidLoad() {
     if (this.isServer) return
     // alert('The component did load')
-    this.fetchDepartures() // async
+    void this.fetchDepartures()
     this.onTimer()
     setInterval(() => this.onTimer(), 500)
 
@@ -134,7 +133,7 @@ export class AppSL {
     this.updateData()
   }
 
-  render () {
+  render() {
     const loading = this.loading ? '...' : ''
 
     return (
@@ -147,17 +146,15 @@ export class AppSL {
           </div>
           <div class="row row2">
             <div class="col">
-              Time:{' '}
-              {this.currentTime.toLocaleString(DateTime.TIME_24_WITH_SECONDS)},
-              latestUpdate: {Math.abs(this.secondsDiff(this.latestUpdate))}{' '}
-              seconds ago
+              Time: {this.currentTime.format('HH:mm:ss')}, latestUpdate:{' '}
+              {Math.abs(this.secondsDiff(this.latestUpdate))} seconds ago
               {loading}
               <br />
-              Departures:<br />
+              Departures:
+              <br />
               {this.departures.map(d => (
                 <div>
-                  {d.LineNumber} {d.Destination} {d.DisplayTime}{' '}
-                  {d.ExpectedDateTime}
+                  {d.LineNumber} {d.Destination} {d.DisplayTime} {d.ExpectedDateTime}
                 </div>
               ))}
             </div>
@@ -167,7 +164,7 @@ export class AppSL {
     )
   }
 
-  private async fetchDepartures (): Promise<void> {
+  private async fetchDepartures(): Promise<void> {
     this.loading = true
     const r = await slApiService.getDepartures(RADHUSET_SITE_ID, 30)
     this.loading = false
@@ -176,24 +173,23 @@ export class AppSL {
     setTimeout(() => this.fetchDepartures(), 15000)
   }
 
-  private onTimer (): void {
-    this.currentTime = timeUtil.now()
+  private onTimer(): void {
+    this.currentTime = dayjs()
     this.updateData()
   }
 
-  private secondsDiff (timeStr: string): number {
+  private secondsDiff(timeStr: string): number {
     if (!timeStr) return 0
-    const d = DateTime.fromISO(timeStr)
-    return Math.round(d.diff(this.currentTime).as('seconds'))
+    return dayjs(timeStr).diff(this.currentTime, 'second')
   }
 
-  private getDepartureY (d: Departure): number {
+  private getDepartureY(d: Departure): number {
     if (d.JourneyDirection === 2) return 3 // Kung
     if (d.LineNumber === '10' && d.JourneyDirection === 1) return 1 // hjulsta
     if (d.LineNumber === '11' && d.JourneyDirection === 1) return 2 // Akalla
   }
 
-  private updateData (): void {
+  private updateData(): void {
     // console.log(this.departures.length)
     const dataTimetabled = this.departures
       .map(d => {
